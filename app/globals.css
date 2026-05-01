@@ -1,24 +1,51 @@
 @import "tailwindcss";
 
+/* =========================
+   ROOT DESIGN TOKENS
+========================= */
+
 :root {
-  --background: #0A0A0A;
-  --surface: #111111;
-  --accent: #D4AF37;
-  --accent-hover: #E5C158;
-  --text: #EAEAEA;
+  --background: #0B0B0B;
+  --surface: #161616;
+
+  --accent: #3B82F6;
+  --accent-hover: #60A5FA;
+
+  --text: #F5F5F5;
   --text-muted: #9CA3AF;
+
+  /* PRIZM branding */
+  --prizm-blue: #0d1d7e;
+
+  --prizm-copper-dark: #9C5C3C;
+  --prizm-copper: #C07A57;
+  --prizm-copper-light: #D79A7A;
+  --prizm-copper-highlight: #E2B79A;
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
+
+/* =========================
+   TAILWIND THEME TOKENS
+========================= */
 
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);
+
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
+
   --color-text: var(--text);
   --color-text-muted: var(--text-muted);
-  --font-heading: var(--font-playfair);
-  --font-body: var(--font-inter);
+
+  --color-prizm-blue: var(--prizm-blue);
 }
+
+/* =========================
+   BASE STYLES
+========================= */
 
 html {
   scroll-behavior: smooth;
@@ -27,15 +54,260 @@ html {
 body {
   background: var(--background);
   color: var(--text);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .font-heading {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-heading), system-ui, sans-serif;
 }
 
-/* Smooth transitions for Apple-style feel */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   PRIZM LOGO STYLES
+========================= */
+
+.prizm-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--prizm-copper-dark),
+    var(--prizm-copper),
+    var(--prizm-copper-light),
+    var(--prizm-copper-highlight)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.prizm-logo {
+  letter-spacing: 0.25em;
+  font-weight: 300;
+}
+
+.prizm-subtext {
+  letter-spacing: 0.35em;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   PRIZM SECTION BACKGROUND
+========================= */
+
+.prizm-bg {
+  background: radial-gradient(
+      circle at 50% 30%,
+      rgba(255,255,255,0.05),
+      transparent 45%
+    ),
+    var(--prizm-blue);
+}
+
+/* =========================
+   SCROLL FADE ANIMATION
+========================= */
+
+.prizm-fade {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.prizm-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   PRIZM SECTION
+========================= */
+
+.prizm-section {
+  background: linear-gradient(
+    180deg,
+    rgba(11,11,11,0) 0%,
+    var(--prizm-blue) 35%,
+    var(--prizm-blue) 100%
+  );
+}
+
+/* optional metallic shine on copper gradient text */
+.prizm-gradient::after {
+  content: "";
+}
+
+/* ===============================
+   PRIZM BACKGROUND GRADIENT
+================================ */
+
+.prizm-page-bg {
+  background: linear-gradient(
+    180deg,
+    #0B0B0B 0%,
+    #0B0B0B 35%,
+    #07135a 55%,
+    #0d1d7e 75%,
+    #0d1d7e 100%
+  );
+}
+
+/* ===============================
+   COPPER TEXT GRADIENT
+================================ */
+
+.prizm-copper-text {
+  background: linear-gradient(
+    90deg,
+    #9C5C3C,
+    #C07A57,
+    #D79A7A,
+    #E2B79A
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   PREMIUM COATING CARD
+================================ */
+
+.coating-card-premium {
+  border: 1px solid rgba(215,154,122,0.35);
+  box-shadow: 0 0 40px rgba(215,154,122,0.08);
+}
+
+/* ===============================
+   PRIZM INFINITE SCROLL
+================================ */
+
+@keyframes prizm-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.prizm-scroll-track {
+  animation: prizm-scroll 35s linear infinite;
+}
+
+/* ===============================
+   GALLERY — SHOWROOM EXPERIENCE
+================================ */
+
+@keyframes gallery-reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gallery-intro-glow {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gallery-car-drive {
+  0% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(5.25rem);
+    opacity: 0.3;
+  }
+}
+
+.gallery-intro-ambient {
+  animation: gallery-intro-glow 10s ease-in-out infinite;
+}
+
+.gallery-car-runner {
+  animation: gallery-car-drive 2.75s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+}
+
+/* Gallery floor: subtle “doors opening” — opacity + lift + scale (no clip-path, GPU-friendly). */
+.gallery-floor-content {
+  opacity: 0.84;
+  transform: translateY(1.5rem) scale(0.988);
+  transition:
+    opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gallery-floor--open .gallery-floor-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.gallery-reveal-line {
+  opacity: 0;
+  animation: gallery-reveal-up 1.05s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.gallery-reveal-delay-0 {
+  animation-delay: 0.1s;
+}
+
+.gallery-reveal-delay-1 {
+  animation-delay: 0.32s;
+}
+
+.gallery-reveal-delay-2 {
+  animation-delay: 0.54s;
+}
+
+.gallery-reveal-delay-3 {
+  animation-delay: 0.82s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-intro-ambient {
+    animation: none;
+  }
+
+  .gallery-reveal-line {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .gallery-car-runner {
+    animation: none;
+    transform: translateY(3.25rem);
+    opacity: 0.85;
+  }
+
+  .gallery-floor-content {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

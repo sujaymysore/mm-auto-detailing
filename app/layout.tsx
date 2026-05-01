@@ -1,34 +1,35 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const outfit = Outfit({
+  variable: "--font-heading",
   subsets: ["latin"],
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const dmSans = DM_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "M&M Auto Detailing | Premium Automotive Care",
-  description: "Premium automotive detailing, ceramic coating, and paint correction. Experience luxury car care.",
+  description:
+    "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="antialiased bg-[#0A0A0A] text-[#EAEAEA]">
+    <html lang="en" className={`${outfit.variable} ${dmSans.variable}`}>
+      <body className="antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />

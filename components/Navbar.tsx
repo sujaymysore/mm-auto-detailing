@@ -3,10 +3,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import {
+  InstagramIcon,
+  SOCIAL_LINKS,
+  SocialIconLink,
+  TiktokIcon,
+} from "./SocialIcons";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/bikes", label: "Bikes" },
   { href: "/ceramic", label: "Ceramic Coating" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
@@ -17,7 +24,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0F172A]/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
         <Link
           href="/"
@@ -39,9 +46,17 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+          <div className="flex items-center gap-2">
+            <SocialIconLink href={SOCIAL_LINKS.instagram} label="Instagram" size="sm">
+              <InstagramIcon />
+            </SocialIconLink>
+            <SocialIconLink href={SOCIAL_LINKS.tiktok} label="TikTok" size="sm">
+              <TiktokIcon />
+            </SocialIconLink>
+          </div>
           <Link
             href="/contact"
-            className="rounded-sm border border-accent/50 bg-accent/5 px-5 py-2.5 text-sm font-medium text-accent transition-all duration-250 hover:border-accent hover:bg-accent/10 hover:shadow-[0_0_20px_rgba(212,175,55,0.15)]"
+            className="rounded-sm border border-accent/50 bg-accent/10 px-5 py-2.5 text-sm font-medium text-accent transition-all duration-250 hover:border-accent hover:bg-accent/20 hover:shadow-[0_0_20px_rgba(96,165,250,0.25)]"
           >
             Book Now
           </Link>
@@ -91,6 +106,14 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+          <div className="flex items-center gap-3">
+            <SocialIconLink href={SOCIAL_LINKS.instagram} label="Instagram">
+              <InstagramIcon />
+            </SocialIconLink>
+            <SocialIconLink href={SOCIAL_LINKS.tiktok} label="TikTok">
+              <TiktokIcon />
+            </SocialIconLink>
+          </div>
           <Link
             href="/contact"
             onClick={() => setMobileMenuOpen(false)}

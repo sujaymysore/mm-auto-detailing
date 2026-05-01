@@ -1,8 +1,8 @@
 import Hero from "@/components/Hero";
 import { AboutSection } from "@/components/AboutSection";
 import { ServicesPreview } from "@/components/ServicesPreview";
+import ReviewsSection from "@/components/ReviewsSection";
 import { CeramicHighlight } from "@/components/CeramicHighlight";
-import { GalleryPreview } from "@/components/GalleryPreview";
 import { CallToAction } from "@/components/CallToAction";
 
 export default function Home() {
@@ -15,8 +15,8 @@ export default function Home() {
       />
       <AboutSection />
       <ServicesPreview />
+      <ReviewsSection />
       <CeramicHighlight />
-      <GalleryPreview />
       <CallToAction />
     </main>
   );

@@ -46,7 +46,7 @@ export function ServicesPreview() {
             <SectionFadeIn key={service.title} delay={index * 100}>
               <Link
                 href={service.href}
-                className="group block p-8 md:p-10 rounded-2xl bg-surface border border-white/5 hover:border-accent/30 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(212,175,55,0.15)]"
+                className="group block p-8 md:p-10 rounded-2xl bg-surface border border-white/5 hover:border-accent/30 transition-all duration-300 hover:shadow-[0_0_40px_-10px_rgba(96,165,250,0.2)]"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
                   <span className="text-accent text-xl font-heading font-semibold">

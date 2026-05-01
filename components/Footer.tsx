@@ -1,17 +1,23 @@
 import Link from "next/link";
+import {
+  InstagramIcon,
+  SOCIAL_LINKS,
+  SocialIconLink,
+  TiktokIcon,
+} from "./SocialIcons";
 
 const footerLinks = {
   navigation: [
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
+    { href: "/bikes", label: "Bikes" },
     { href: "/ceramic", label: "Ceramic Coating" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact" },
   ],
   contact: {
-    phone: "+1 (555) 123-4567",
-    email: "hello@luxedetail.com",
-    address: "123 Premium Drive, Beverly Hills, CA",
+    phone: "+61 493 737 792",
+    email: "mmautodetailing@gmail.com",
   },
 };
 
@@ -75,8 +81,15 @@ export function Footer() {
                   {footerLinks.contact.email}
                 </a>
               </li>
-              <li>{footerLinks.contact.address}</li>
             </ul>
+            <div className="mt-5 flex items-center gap-3">
+              <SocialIconLink href={SOCIAL_LINKS.instagram} label="Instagram">
+                <InstagramIcon />
+              </SocialIconLink>
+              <SocialIconLink href={SOCIAL_LINKS.tiktok} label="TikTok">
+                <TiktokIcon />
+              </SocialIconLink>
+            </div>
           </div>
         </div>
 
