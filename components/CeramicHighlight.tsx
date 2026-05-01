@@ -45,7 +45,7 @@ export function CeramicHighlight() {
           <SectionFadeIn delay={200}>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-white/5 border border-white/10">
               <Image
-                src="/images/gti75%25home_hero.jpeg"
+                src="/images/gti75home_hero.jpeg"
                 alt="Volkswagen Golf GTI with showroom ceramic coating finish"
                 fill
                 className="object-cover"
