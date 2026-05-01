@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     `;
 
     const { error } = await resend.emails.send({
-      from: "M&M Auto Detailing <onboarding@resend.dev>",
+      from: "M&M Auto Detailing <quotes@mmautodetailing.com.au>",
       to: "mmcardetailing07@gmail.com",
       subject: `Quote request from ${name.trim()}`,
       html,
