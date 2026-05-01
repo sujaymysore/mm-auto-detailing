@@ -89,7 +89,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 top-[72px] bg-background/95 backdrop-blur-xl md:hidden ${
+        className={`fixed inset-0 top-[72px] bg-[#0F172A] border-t border-white/10 shadow-2xl md:hidden ${
           mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         } transition-all duration-300`}
       >
