@@ -78,7 +78,7 @@ const GALLERY_OVERFLOW: GallerySlotData[] = [
 /** Remaining files from `mywebsiteimages/` (everything in that folder is included). */
 const GALLERY_MYWEBSITE_REST: GallerySlotData[] = [
   { src: galleryAsset("10_year_coating.jpeg") },
-  { src: galleryAsset("Forester 10_year_coating.jpeg") },
+  { src: galleryAsset("Forester_10_year_coating.jpeg") },
   { src: galleryAsset("IMG_2881.jpeg") },
   { src: galleryAsset("IMG_0508.jpeg") },
   { src: galleryAsset("Gx550_interior.jpeg") },
