@@ -60,31 +60,31 @@ export const GALLERY_SLOTS: GallerySlotData[] = [
   { src: galleryAsset("cayennesnowfoam.jpeg") },
   { src: galleryAsset("c63snowfoam.jpeg") },
   { src: galleryAsset("whitewrxwheels.jpeg") },
-  { src: galleryAsset("WRX exterior .jpeg") },
-  { src: galleryAsset("WRX fender .jpeg") },
+  { src: galleryAsset("WRX_exterior.jpeg") },
+  { src: galleryAsset("WRX_fender.jpeg") },
   { src: galleryAsset("4seriesinterior.jpeg") },
   { src: galleryAsset("rangeautiobioginterior.jpeg") },
   { src: galleryAsset("fiestatophood.jpeg") },
-  { src: galleryAsset("Gle exterior .jpeg") },
+  { src: galleryAsset("Gle_exterior.jpeg") },
 ];
 
 const GALLERY_OVERFLOW: GallerySlotData[] = [
   { src: galleryAsset("mttophood.jpeg") },
   { src: galleryAsset("stifenderandwheel.jpeg") },
   { src: galleryAsset("glshouseside.jpeg") },
-  { src: galleryAsset("Gti - paint shine .jpg") },
+  { src: galleryAsset("Gti_paint_shine.jpg") },
 ];
 
 /** Remaining files from `mywebsiteimages/` (everything in that folder is included). */
 const GALLERY_MYWEBSITE_REST: GallerySlotData[] = [
-  { src: galleryAsset("10 year coating .jpeg") },
-  { src: galleryAsset("Forester 10 year coating .jpeg") },
+  { src: galleryAsset("10_year_coating.jpeg") },
+  { src: galleryAsset("Forester 10_year_coating.jpeg") },
   { src: galleryAsset("IMG_2881.jpeg") },
   { src: galleryAsset("IMG_0508.jpeg") },
-  { src: galleryAsset("Gx550 interior .jpeg") },
-  { src: galleryAsset("Cayenne interior .jpeg") },
-  { src: galleryAsset("pradosnowfoam 2.jpeg") },
-  { src: galleryAsset("Gls interior .jpeg") },
+  { src: galleryAsset("Gx550_interior.jpeg") },
+  { src: galleryAsset("Cayenne_interior.jpeg") },
+  { src: galleryAsset("pradosnowfoam2.jpeg") },
+  { src: galleryAsset("Gls_interior.jpeg") },
 ];
 
 const GALLERY_SEQUENCE: GallerySlotData[] = [
