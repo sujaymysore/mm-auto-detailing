@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -15,22 +13,16 @@ export async function POST(request: Request) {
       );
     }
 
-    const toEmail = process.env.CONTACT_EMAIL || process.env.RESEND_TO_EMAIL;
-    if (!toEmail) {
-      console.error("CONTACT_EMAIL or RESEND_TO_EMAIL is not set");
-      return NextResponse.json(
-        { error: "Server is not configured to receive emails." },
-        { status: 500 }
-      );
-    }
-
-    if (!process.env.RESEND_API_KEY) {
+    const resendApiKey = process.env.RESEND_API_KEY;
+    if (!resendApiKey) {
       console.error("RESEND_API_KEY is not set");
       return NextResponse.json(
         { error: "Server is not configured to send emails." },
         { status: 500 }
       );
     }
+
+    const resend = new Resend(resendApiKey);
 
     const html = `
       <h2>New contact / quote request</h2>
@@ -44,9 +36,8 @@ export async function POST(request: Request) {
     `;
 
     const { error } = await resend.emails.send({
-      from:
-        process.env.RESEND_FROM_EMAIL || "M&M Auto Detailing <onboarding@resend.dev>",
-      to: toEmail,
+      from: "M&M Auto Detailing <onboarding@resend.dev>",
+      to: "mmcardetailing07@gmail.com",
       subject: `Quote request from ${name.trim()}`,
       html,
     });
