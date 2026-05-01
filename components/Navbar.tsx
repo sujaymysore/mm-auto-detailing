@@ -88,41 +88,39 @@ export function Navbar() {
       </nav>
 
       {/* Mobile menu */}
-      <div
-        className={`fixed inset-0 top-[72px] bg-[#0F172A] border-t border-white/10 shadow-2xl md:hidden ${
-          mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        } transition-all duration-300`}
-      >
-        <div className="flex flex-col gap-8 px-8 py-12">
-          {navLinks.map((link) => (
+      {mobileMenuOpen && (
+        <div className="fixed inset-x-0 top-[72px] bottom-0 z-[60] bg-[#0F172A] border-t border-white/10 shadow-2xl md:hidden">
+          <div className="flex h-full flex-col gap-8 overflow-y-auto px-8 py-12">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-2xl font-medium transition-colors duration-200 hover:text-accent ${
+                  pathname === link.href ? "text-accent" : "text-text"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="flex items-center gap-3">
+              <SocialIconLink href={SOCIAL_LINKS.instagram} label="Instagram">
+                <InstagramIcon />
+              </SocialIconLink>
+              <SocialIconLink href={SOCIAL_LINKS.tiktok} label="TikTok">
+                <TiktokIcon />
+              </SocialIconLink>
+            </div>
             <Link
-              key={link.href}
-              href={link.href}
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className={`text-2xl font-medium transition-colors duration-200 hover:text-accent ${
-                pathname === link.href ? "text-accent" : "text-text"
-              }`}
+              className="mt-4 inline-block rounded-sm border border-accent px-8 py-4 text-center text-lg font-medium text-accent"
             >
-              {link.label}
+              Book Now
             </Link>
-          ))}
-          <div className="flex items-center gap-3">
-            <SocialIconLink href={SOCIAL_LINKS.instagram} label="Instagram">
-              <InstagramIcon />
-            </SocialIconLink>
-            <SocialIconLink href={SOCIAL_LINKS.tiktok} label="TikTok">
-              <TiktokIcon />
-            </SocialIconLink>
           </div>
-          <Link
-            href="/contact"
-            onClick={() => setMobileMenuOpen(false)}
-            className="mt-4 inline-block rounded-sm border border-accent px-8 py-4 text-center text-lg font-medium text-accent"
-          >
-            Book Now
-          </Link>
         </div>
-      </div>
+      )}
     </header>
   );
 }
