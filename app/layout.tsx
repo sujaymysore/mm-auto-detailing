@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
     images: [
       {
-        url: "/icon.png",
+        url: "/og-image.jpg",
         width: 512,
         height: 512,
       },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "M&M Auto Detailing | Premium Automotive Care",
     description:
       "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
-    images: ["/icon.png"],
+    images: ["/og-image.jpg"],
   },
 };
 
