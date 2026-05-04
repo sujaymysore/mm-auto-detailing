@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import {
@@ -27,11 +28,15 @@ export function Navbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0F172A]/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-          <Link
-            href="/"
-            className="font-heading text-xl font-medium tracking-wide text-text transition-colors duration-200 hover:text-accent"
-          >
-            M&M AUTO DETAILING
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/FullLogo.jpg"
+              alt="M&M Auto Detailing"
+              width={120}
+              height={48}
+              className="object-contain"
+              priority
+            />
           </Link>
 
           <div className="hidden items-center gap-10 md:flex">
