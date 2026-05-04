@@ -27,13 +27,13 @@ export function Navbar() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0F172A]/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
           <Link href="/" className="flex items-center">
             <Image
               src="/FullLogo.jpg"
               alt="M&M Auto Detailing"
-              width={120}
-              height={48}
+              width={80}
+              height={32}
               className="object-contain"
               priority
             />
