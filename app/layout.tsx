@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   description:
     "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
   icons: {
-    icon: "/FullLogo.jpg",
-    apple: "/FullLogo.jpg",
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
   openGraph: {
     title: "M&M Auto Detailing | Premium Automotive Care",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
     images: [
       {
-        url: "/FullLogo.jpg",
+        url: "/icon.png",
         width: 512,
         height: 512,
       },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "M&M Auto Detailing | Premium Automotive Care",
     description:
       "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
-    images: ["/FullLogo.jpg"],
+    images: ["/icon.png"],
   },
 };
 
