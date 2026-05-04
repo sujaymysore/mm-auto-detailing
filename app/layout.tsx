@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     title: "M&M Auto Detailing | Premium Automotive Care",
     description:
       "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
-  metadataBase: new URL("https://www.mmautodetailing.com.au"),
     images: [
       {
         url: "/og-image.jpg",
@@ -43,7 +42,6 @@ export const metadata: Metadata = {
     title: "M&M Auto Detailing | Premium Automotive Care",
     description:
       "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
-  metadataBase: new URL("https://www.mmautodetailing.com.au"),
     images: ["/og-image.jpg"],
   },
 };
