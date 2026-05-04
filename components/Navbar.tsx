@@ -28,17 +28,26 @@ export function Navbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0F172A]/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
-          <Link href="/" className="flex items-center">
+
+          {/* Logo + wordmark */}
+          <Link
+            href="/"
+            className="group relative flex items-center gap-3 rounded-md ring-2 ring-transparent transition-[shadow,transform] duration-200 hover:-translate-y-px hover:shadow-[0_0_22px_rgba(251,191,36,0.35),0_8px_24px_rgba(0,0,0,0.35)] active:translate-y-0 active:shadow-[0_0_28px_rgba(251,191,36,0.5)] focus-visible:outline-none focus-visible:ring-amber-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
+          >
             <Image
               src="/FullLogo.jpg"
               alt="M&M Auto Detailing"
               width={80}
               height={32}
-              className="object-contain"
+              className="object-contain transition-[filter] duration-200 group-hover:drop-shadow-[0_0_10px_rgba(251,191,36,0.55)]"
               priority
             />
+            <span className="hidden sm:block font-heading text-sm font-light tracking-[0.2em] text-white/80 transition-colors duration-200 group-hover:text-amber-300">
+              M&amp;M AUTO DETAILING
+            </span>
           </Link>
 
+          {/* Desktop nav */}
           <div className="hidden items-center gap-10 md:flex">
             {navLinks.map((link) => (
               <Link
@@ -61,12 +70,13 @@ export function Navbar() {
             </div>
             <Link
               href="/contact"
-              className="rounded-sm border border-accent/50 bg-accent/10 px-5 py-2.5 text-sm font-medium text-accent transition-all duration-250 hover:border-accent hover:bg-accent/20 hover:shadow-[0_0_20px_rgba(96,165,250,0.25)]"
+              className="rounded-sm border border-accent/50 bg-accent/10 px-5 py-2.5 text-sm font-medium text-accent transition-all duration-200 hover:border-accent hover:bg-accent/20 hover:shadow-[0_0_20px_rgba(96,165,250,0.25)]"
             >
               Book Now
             </Link>
           </div>
 
+          {/* Mobile menu button */}
           <button
             type="button"
             className="md:hidden flex flex-col gap-1.5 p-2 text-text"
@@ -92,8 +102,9 @@ export function Navbar() {
         </nav>
       </header>
 
+      {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-x-0 top-[88px] bottom-0 z-[60] bg-[#0F172A] border-t border-white/10 shadow-2xl md:hidden">
+        <div className="fixed inset-x-0 top-[72px] bottom-0 z-[60] bg-[#0F172A] border-t border-white/10 shadow-2xl md:hidden">
           <div className="flex h-full flex-col gap-8 overflow-y-auto px-8 py-12">
             {navLinks.map((link) => (
               <Link
