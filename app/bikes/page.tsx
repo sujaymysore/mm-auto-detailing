@@ -25,9 +25,9 @@ const bikeGallery = [
 ];
 
 export const metadata = {
-  title: "Bike Detailing | M&M Auto Detailing",
+  title: "Motorcycle Detailing Sydney | M&M Auto Detailing",
   description:
-    "Premium mobile bike detailing packages, add-ons, and protection services.",
+    "Motorcycle and bike detailing in Sydney, including wash, polish, chain clean, seat conditioning and ceramic protection options.",
 };
 
 export default function BikesPage() {
