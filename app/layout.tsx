@@ -17,18 +17,18 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "M&M Auto Detailing | Premium Automotive Care",
+  title: "M&M Auto Detailing | Mobile Car Detailing Sydney",
   description:
-    "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
+    "Sydney's mobile car detailing specialists. Ceramic coating, paint correction, bike detailing and more, we come to you.",
   metadataBase: new URL("https://www.mmautodetailing.com.au"),
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
   },
   openGraph: {
-    title: "M&M Auto Detailing | Premium Automotive Care",
+    title: "M&M Auto Detailing | Mobile Car Detailing Sydney",
     description:
-      "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
+      "Sydney's mobile car detailing specialists. Ceramic coating, paint correction, bike detailing and more, we come to you.",
     images: [
       {
         url: "/og-image.jpg",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "M&M Auto Detailing | Premium Automotive Care",
+    title: "M&M Auto Detailing | Mobile Car Detailing Sydney",
     description:
-      "Premium automotive detailing, ceramic coating, paint correction and mobile detailing services.",
+      "Sydney's mobile car detailing specialists. Ceramic coating, paint correction, bike detailing and more, we come to you.",
     images: ["/og-image.jpg"],
   },
 };

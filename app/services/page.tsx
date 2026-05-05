@@ -151,9 +151,9 @@ const additionalServices = [
 ];
 
 export const metadata = {
-  title: "Services | M&M Auto Detailing",
+  title: "Mobile Car Detailing Packages Sydney | M&M Auto Detailing",
   description:
-    "Mobile car detailing packages: Level 1–3 details, Pre-Sale detail, clay bar, headlight restoration, leather care and more.",
+    "Sydney mobile car detailing packages from $120. Level 1 to Pre-Sale detail, clay bar, headlight restoration, leather care and more.",
 };
 
 export default function ServicesPage() {

@@ -120,9 +120,9 @@ const maintenanceDetailItems = [
 ];
 
 export const metadata = {
-  title: "Prizm Ceramic Coatings | M&M Auto Detailing",
+  title: "Ceramic Coating Sydney | PRIZM Ceramic Coatings | M&M Auto Detailing",
   description:
-    "Prizm ceramic coating range, paint correction, and ceramic maintenance details. Professional protection for your vehicle.",
+    "PRIZM ceramic coating services in Sydney for long-lasting paint protection, gloss and easier maintenance. Explore coating packages and add-ons.",
 };
 
 export default function CeramicPage() {
