@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# M&M Auto Detailing — Website
 
-## Getting Started
+Marketing site for M&M Auto Detailing, a Sydney mobile car detailing business.
+Features services, ceramic coatings, bike detailing, gallery, and a contact/quote flow.
 
-First, run the development server:
+🌐 Live site: [mmautodetailing.com.au](https://www.mmautodetailing.com.au)
+
+## Stack
+
+- **Framework:** Next.js (App Router)
+- **UI:** React, TypeScript, Tailwind CSS v4
+- **Email:** Resend (contact API route)
+- **Fonts:** Outfit (headings), DM Sans (body) via `next/font`
+
+## Requirements
+
+- Node.js 20+
+- npm
+
+## Setup
 
 ```bash
+npm install
+# Add RESEND_API_KEY to .env.local for contact form emails
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---|---|
+| `npm run dev` | Dev server |
+| `npm run build` | Production build |
+| `npm run start` | Production server |
+| `npm run lint` | ESLint |
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` — pages, layout, global styles, `app/api/contact` route
+- `components/` — shared UI components
+- `public/` — static assets including `public/images/`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/` — Home
+- `/services` — Car detailing packages
+- `/ceramic` — Ceramic / Prizm coating content
+- `/bikes` — Bike detailing
+- `/gallery` — Photo and video gallery
+- `/contact` — Contact and quote form
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Variable | Description |
+| `RESEND_API_KEY` | Required for contact form emails via `app/api/contact/route.ts` |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Deployed on Vercel. Set environment variables in Vercel project settings and connect repo to deploy.
+
+## License
+
+Private — all rights reserved.
