@@ -6,7 +6,7 @@ import Hero from "../../components/Hero";
 
 const valueProps = [
   {
-    title: "Tiered for every need",
+    title: "Tailored for every need",
     body: "From a thorough wash and vacuum to full interior extraction and pre-sale presentation.",
   },
   {
@@ -15,7 +15,7 @@ const valueProps = [
   },
   {
     title: "Protection add-ons",
-    body: "Clay bar, sealant, leather care and more—stack extras or book them on their own.",
+    body: "Clay bar, ceramic sealant, leather care and more—stack extras or book them on their own.",
   },
 ];
 
@@ -170,8 +170,8 @@ export default function ServicesPage() {
       {/* Full-bleed visual — breaks up vertical rhythm and uses horizontal space */}
       <section className="relative mx-6 md:mx-10 lg:mx-16 mt-4 mb-4 md:mb-0 rounded-3xl overflow-hidden border border-white/10 min-h-[220px] md:min-h-[320px] lg:min-h-[380px]">
         <Image
-          src="/images/glsfoam_contact.jpeg"
-          alt="Snow foam pre-wash on vehicle"
+          src="/images/gallery/mywebsiteimages/m2fullfront.jpeg"
+          alt="Detailed Mercedes exterior finish"
           fill
           className="object-cover object-center"
           sizes="(max-width: 768px) 100vw, 90vw"

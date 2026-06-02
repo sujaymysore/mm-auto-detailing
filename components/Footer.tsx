@@ -16,8 +16,7 @@ const footerLinks = {
     { href: "/contact", label: "Contact" },
   ],
   contact: {
-    phone: "+61 493 737 792",
-    email: "mmautodetailing@gmail.com",
+    email: "mmcardetailing07@gmail.com",
   },
 };
 
@@ -35,8 +34,7 @@ export function Footer() {
               M&M AUTO DETAILING
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-text/60">
-              Premium automotive detailing for discerning owners. Where precision
-              meets perfection.
+              Premium car detailing. Precision finish, every time.
             </p>
           </div>
 
@@ -65,14 +63,6 @@ export function Footer() {
               CONTACT
             </h4>
             <ul className="mt-4 space-y-3 text-sm text-text/70">
-              <li>
-                <a
-                  href={`tel:${footerLinks.contact.phone.replace(/\D/g, "")}`}
-                  className="transition-colors duration-200 hover:text-accent"
-                >
-                  {footerLinks.contact.phone}
-                </a>
-              </li>
               <li>
                 <a
                   href={`mailto:${footerLinks.contact.email}`}

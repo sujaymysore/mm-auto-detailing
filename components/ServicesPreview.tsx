@@ -7,7 +7,7 @@ import { SectionFadeIn } from "./SectionFadeIn";
 const services = [
   {
     title: "Ceramic Coating",
-    description: "Premium nano-ceramic protection that delivers unmatched gloss and durability for years.",
+    description: "Premium paint protection for lasting gloss and easier maintenance.",
     href: "/ceramic",
   },
   {
