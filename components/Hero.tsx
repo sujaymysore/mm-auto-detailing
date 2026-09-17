@@ -40,7 +40,7 @@ export default function Hero({
             src="/images/gallery/mywebsiteimages/m2fullfront.jpeg"
             alt=""
             fill
-            className="object-cover object-[46%_center] sm:object-[48%_42%] md:object-[50%_40%]"
+            className="object-cover object-[46%_center] scale-[1.32] sm:scale-110 sm:object-[48%_42%] md:scale-100 md:object-[50%_40%]"
             priority
             sizes="100vw"
             quality={90}
@@ -70,19 +70,23 @@ export default function Hero({
       <div
         className={`relative z-10 mx-auto max-w-7xl px-6 text-center ${
           isHome
-            ? "flex flex-1 flex-col justify-end pb-8 pt-28 md:pb-10 md:pt-32"
+            ? "flex flex-1 flex-col justify-end pb-4 pt-24 sm:pb-8 sm:pt-28 md:pb-10 md:pt-32"
             : ""
         }`}
       >
         {subtitle && (
-          <p className="mb-4 font-medium tracking-[0.3em] text-accent">
+          <p
+            className={`font-medium tracking-[0.3em] text-accent ${
+              isHome ? "mb-2 sm:mb-4" : "mb-4"
+            }`}
+          >
             {subtitle}
           </p>
         )}
         <h1
           className={`font-heading font-light leading-tight tracking-tight text-text ${
             isHome
-              ? "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+              ? "text-[1.85rem] sm:text-5xl md:text-6xl lg:text-7xl"
               : "text-5xl md:text-7xl lg:text-8xl"
           }`}
         >
@@ -92,7 +96,7 @@ export default function Hero({
           <p
             className={`mx-auto max-w-2xl leading-relaxed ${
               isHome
-                ? "mt-6 text-base text-text/80 md:mt-8 md:text-lg"
+                ? "mt-3 max-w-md text-sm text-text/80 sm:mt-6 sm:max-w-2xl sm:text-base md:mt-8 md:text-lg"
                 : "mt-8 text-lg text-text/70"
             }`}
           >
@@ -100,7 +104,7 @@ export default function Hero({
           </p>
         )}
         {showCta && isHome && (
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-10 sm:flex-row">
+          <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
             <Button href="/contact" variant="primary">
               Request a Booking
             </Button>
