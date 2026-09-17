@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main>
       <Hero
-        title="Precision in Every Detail"
-        subtitle="Premium Automotive Care"
-        description="Where luxury meets craftsmanship. Experience the finest ceramic coating, paint correction, and detailing services for your vehicle."
+        title="Mobile Car Detailing in Sydney"
+        subtitle="Mobile Automotive Care"
+        description="Professional detailing, paint correction and ceramic coating at your home or workplace."
       />
       <AboutSection />
       <ServicesPreview />

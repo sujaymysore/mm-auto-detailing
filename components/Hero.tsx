@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/Button";
+import { TrustStrip } from "./TrustStrip";
 
 interface HeroProps {
   title: string;
@@ -20,32 +21,38 @@ export default function Hero({
   compact = false,
 }: HeroProps) {
   const isHome = variant === "home";
-  const pageHeightClass =
-    compact
-      ? "min-h-[clamp(22rem,52vh,38rem)] py-24 md:py-28"
-      : "min-h-screen";
+  const pageHeightClass = compact
+    ? "min-h-[clamp(22rem,52vh,38rem)] py-24 md:py-28"
+    : "min-h-screen";
 
   return (
     <section
-      className={`relative flex items-center justify-center overflow-hidden ${isHome ? "min-h-screen" : pageHeightClass}`}
+      className={`relative flex overflow-hidden ${
+        isHome
+          ? "min-h-screen flex-col"
+          : `items-center justify-center ${pageHeightClass}`
+      }`}
     >
       {/* Background image (homepage only) */}
       {isHome && (
         <>
           <Image
-            src="/images/pradohome_hero.jpeg"
+            src="/images/gallery/mywebsiteimages/m2fullfront.jpeg"
             alt=""
             fill
-            className="object-cover object-center"
+            className="origin-bottom object-cover object-[46%_center] scale-[1.38] sm:origin-center sm:scale-105 sm:object-[48%_42%] md:scale-100 md:object-[50%_40%]"
             priority
             sizes="100vw"
             quality={90}
           />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/50" />
-          {/* Bottom gradient fade into next section */}
+          {/* Gradient overlay: keep the BMW readable, darken the lower third for type */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/15" />
           <div
-            className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#0B0B0B] to-transparent"
+            className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/25"
+            aria-hidden
+          />
+          <div
+            className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#0B0B0B] to-transparent"
             aria-hidden
           />
         </>
@@ -59,25 +66,47 @@ export default function Hero({
         </>
       )}
 
-      {/* Content — above image and overlays */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
+      {/* Content — above image and overlays. Home copy sits over the driveway so the BMW stays visible. */}
+      <div
+        className={`relative z-10 mx-auto max-w-7xl px-6 text-center ${
+          isHome
+            ? "flex flex-1 flex-col justify-end pb-4 pt-24 sm:pb-8 sm:pt-28 md:pb-10 md:pt-32"
+            : ""
+        }`}
+      >
         {subtitle && (
-          <p className="mb-4 font-medium tracking-[0.3em] text-accent">
+          <p
+            className={`font-medium tracking-[0.3em] text-accent ${
+              isHome ? "mb-2 sm:mb-4" : "mb-4"
+            }`}
+          >
             {subtitle}
           </p>
         )}
-        <h1 className="font-heading text-5xl font-light leading-tight tracking-tight text-text md:text-7xl lg:text-8xl">
+        <h1
+          className={`font-heading font-light leading-tight tracking-tight text-text ${
+            isHome
+              ? "text-[1.85rem] sm:text-5xl md:text-6xl lg:text-7xl"
+              : "text-5xl md:text-7xl lg:text-8xl"
+          }`}
+        >
           {title}
         </h1>
         {description && (
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-text/70">
+          <p
+            className={`mx-auto max-w-2xl leading-relaxed ${
+              isHome
+                ? "mt-3 max-w-md text-sm text-text/80 sm:mt-6 sm:max-w-2xl sm:text-base md:mt-8 md:text-lg"
+                : "mt-8 text-lg text-text/70"
+            }`}
+          >
             {description}
           </p>
         )}
         {showCta && isHome && (
-          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
             <Button href="/contact" variant="primary">
-              Book Your Detail
+              Request a Booking
             </Button>
             <Button href="/services" variant="secondary">
               View Services
@@ -93,12 +122,7 @@ export default function Hero({
         )}
       </div>
 
-      {/* Scroll indicator (home only) */}
-      {isHome && (
-        <div className="absolute bottom-12 left-1/2 z-10 -translate-x-1/2 animate-bounce">
-          <div className="h-10 w-px bg-gradient-to-b from-accent/50 to-transparent" />
-        </div>
-      )}
+      {isHome && <TrustStrip />}
     </section>
   );
 }
