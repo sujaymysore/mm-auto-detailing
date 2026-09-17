@@ -22,7 +22,7 @@ export function Button({
   disabled = false,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center px-8 py-3 font-medium transition-all duration-300 ease-out rounded-sm";
+    "inline-flex items-center justify-center px-8 py-3 font-medium transition-all duration-300 ease-out rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#60A5FA] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0B0B] motion-reduce:transition-none motion-reduce:hover:translate-y-0";
 
   const variants = {
     primary:
