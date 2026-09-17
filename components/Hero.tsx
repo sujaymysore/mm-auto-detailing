@@ -40,7 +40,7 @@ export default function Hero({
             src="/images/gallery/mywebsiteimages/m2fullfront.jpeg"
             alt=""
             fill
-            className="object-cover object-[46%_center] scale-[1.32] sm:scale-110 sm:object-[48%_42%] md:scale-100 md:object-[50%_40%]"
+            className="origin-bottom object-cover object-[46%_center] scale-[1.38] sm:origin-center sm:scale-105 sm:object-[48%_42%] md:scale-100 md:object-[50%_40%]"
             priority
             sizes="100vw"
             quality={90}
