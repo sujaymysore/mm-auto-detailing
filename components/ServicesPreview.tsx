@@ -32,11 +32,13 @@ export function ServicesPreview() {
               What We Offer
             </span>
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mt-4 text-text">
-              Premium Services
+              Professional Detailing and Paint Protection
             </h2>
             <p className="text-text-muted mt-6 max-w-2xl mx-auto text-lg">
-              Every vehicle deserves the finest care. Our expert techniques and premium products
-              deliver results that exceed expectations.
+              From regular maintenance details to paint correction and long-term ceramic
+              protection, every service is completed with proper care and genuine attention to
+              detail. As a Prizm-certified detailer, we use proven products and application methods
+              to deliver results you can be proud of.
             </p>
           </div>
         </SectionFadeIn>

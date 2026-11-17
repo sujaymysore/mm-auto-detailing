@@ -12,22 +12,22 @@ export function AboutSection() {
               Our Story
             </span>
             <h2 className="font-heading text-4xl md:text-5xl mt-4 text-text leading-tight">
-              Where Precision Meets Passion
+              Built From a Genuine Love for Cars
             </h2>
             <div className="mt-8 space-y-6 text-text-muted text-lg leading-relaxed">
               <p>
-                We believe every vehicle deserves to look its absolute best. Founded on a commitment
-                to excellence, our studio brings together cutting-edge techniques with an obsessive
-                attention to detail.
+                M&amp;M Auto Detailing started from home in 2023, not as some big studio, but from a
+                genuine love for cars and the pride that came with looking after my own first car.
               </p>
               <p>
-                From exotic supercars to cherished classics, we treat each vehicle as a masterpiece
-                worthy of museum-quality care. Our team of certified specialists uses only the
-                finest products and most advanced methods in the industry.
+                What began at home has grown through the suburbs of Sydney, one vehicle and one
+                customer at a time. No matter what you drive, it receives the same level of care and
+                attention we would give a car belonging to our own family.
               </p>
               <p>
-                The result? A finish that turns heads and protection that stands the test of time.
-                This isn&apos;t just detailing—it&apos;s automotive artistry.
+                For us, detailing is about doing the job properly, respecting every vehicle and
+                making sure the owner is genuinely happy with the result. That approach has stayed
+                the same from the very beginning.
               </p>
             </div>
           </SectionFadeIn>
