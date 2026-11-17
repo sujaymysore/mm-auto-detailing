@@ -1,4 +1,4 @@
-# M&M Auto Detailing — Website
+# M&M Auto Detailing - Website
 
 Marketing site for M&M Auto Detailing, a Sydney mobile car detailing business.
 Features services, ceramic coatings, bike detailing, gallery, and a contact/quote flow.
